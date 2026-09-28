@@ -1,0 +1,126 @@
+.page {
+  min-height: 100vh;
+  background-color: var(--bg-app);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 120px;
+}
+
+.header {
+  background: var(--bg-primary);
+  padding: 16px 20px 16px;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: var(--ink);
+  cursor: pointer;
+  padding: var(--space-2);
+  margin-left: calc(var(--space-2) * -1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-left: 12px;
+  flex: 1;
+}
+
+.content {
+  padding: var(--space-5);
+  flex: 1;
+}
+
+.addressList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.addressCard {
+  background-color: white;
+  border: 2px solid transparent;
+  border-radius: var(--radius-xl);
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+}
+
+.addressCard.primary {
+  border-color: var(--brand-500);
+}
+
+.addressIcon {
+  color: var(--brand-500);
+  margin-top: 2px;
+}
+
+.addressInfo {
+  flex: 1;
+}
+
+.addressLabel {
+  font-weight: 700;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.primaryBadge {
+  background-color: var(--brand-100);
+  color: var(--brand-700);
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.addressText {
+  color: var(--ink-light);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--space-8) var(--space-4);
+  color: var(--ink-light);
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--brand-50);
+  border: 1px solid var(--brand-100);
+  color: var(--brand-600);
+  border-radius: var(--radius-xl);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+
+.addBtn:active {
+  transform: scale(0.98);
+}

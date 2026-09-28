@@ -1,0 +1,70 @@
+.page {
+  background: var(--bg-app);
+  min-height: 100vh;
+  padding-bottom: 88px;
+}
+
+.header {
+  background: var(--bg-primary);
+  padding: 16px 20px 16px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title { font-size: 1.125rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; }
+
+.subtitle { font-size: 0.8125rem; color: var(--text-secondary); font-weight: 500; }
+
+.chatList { 
+  display: flex; 
+  flex-direction: column; 
+  background: var(--bg-primary);
+}
+
+.chatItemLink { text-decoration: none; }
+
+.chatItem {
+  display: flex; gap: 14px; padding: 16px 20px;
+  background: var(--bg-primary); 
+  border-bottom: 1px solid var(--border-light);
+  transition: background 0.15s;
+}
+.chatItem:active { background: var(--bg-tertiary); }
+
+.chatAvatar {
+  width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.125rem; font-weight: 700; color: white;
+}
+
+.chatContent { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; justify-content: center; }
+.chatTop { display: flex; justify-content: space-between; align-items: center; }
+.chatName { font-size: 0.9375rem; font-weight: 700; color: var(--text-primary); }
+.chatTime { font-size: 0.75rem; color: var(--text-secondary); font-weight: 500; flex-shrink: 0; }
+
+.chatBottom { display: flex; justify-content: space-between; align-items: center; }
+.chatMsg {
+  font-size: 0.8125rem; color: var(--text-secondary); font-weight: 400;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.chatBadge {
+  min-width: 20px; height: 20px; border-radius: 50%; background: var(--brand-500);
+  color: white; font-size: 0.6875rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.chatService { 
+  font-size: 0.625rem; 
+  color: var(--brand-700); 
+  background: var(--brand-50); 
+  padding: 2px 6px; 
+  border-radius: var(--radius-sm); 
+  font-weight: 600; 
+  margin-top: 4px; 
+  align-self: flex-start;
+  text-transform: uppercase;
+}

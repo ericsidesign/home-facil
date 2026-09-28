@@ -1,0 +1,45 @@
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.table th {
+  background-color: var(--secondary);
+  font-weight: 600;
+  color: var(--secondary-foreground);
+  font-size: 0.875rem;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.emptyState {
+  text-align: center;
+  color: var(--secondary-foreground);
+  padding: 3rem !important;
+  opacity: 0.7;
+}

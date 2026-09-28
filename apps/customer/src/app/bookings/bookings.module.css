@@ -1,0 +1,293 @@
+.page {
+  background: var(--bg-app);
+  min-height: 100vh;
+  padding-bottom: 88px;
+}
+
+/* ── Header ── */
+.header {
+  background: var(--bg-primary);
+  padding: 16px 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.newBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--brand-50);
+  color: var(--brand-500);
+  border: none;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.newBtn:active {
+  background-color: var(--brand-100);
+}
+
+.subtitle {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid var(--border);
+  margin-top: 8px;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 12px 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  position: relative;
+}
+
+.tabActive {
+  color: var(--brand-600);
+}
+
+.tabActive::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--brand-500);
+  border-radius: 2px 2px 0 0;
+}
+
+/* ── Sections ── */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.sectionHeading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+/* ── Active Card ── */
+.activeCard {
+  background: var(--bg-primary);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.15s;
+}
+
+.activeCard:active {
+  transform: scale(0.98);
+}
+
+.activeCardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.activeCardService {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.activeCardDate {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.statusChip {
+  background: var(--brand-50);
+  color: var(--brand-600);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.divider {
+  border: none;
+  border-top: 1px dashed var(--border);
+  margin: 0;
+}
+
+.activeCardPro {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.proAvatarSmall {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--brand-500);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.proName {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.proEta {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.trackBtn {
+  background: var(--bg-secondary);
+  color: var(--brand-600);
+  text-align: center;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* ── History Cards ── */
+.historyCard {
+  background: var(--bg-primary);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: var(--shadow-card);
+}
+
+.historyTop {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.historyIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.historyInfo {
+  flex: 1;
+}
+
+.historyService {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.historyDate {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.historyPrice {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 4px;
+}
+
+.historyActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.statusBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.statusBadgeDone {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.statusBadgeCancelled {
+  background: #FEE2E2;
+  color: var(--error);
+}
+
+.rebookBtn {
+  background: var(--brand-50);
+  color: var(--brand-600);
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  text-decoration: none;
+}

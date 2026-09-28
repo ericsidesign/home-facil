@@ -1,0 +1,59 @@
+.container { min-height: 100vh; display: flex; flex-direction: column; }
+
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: var(--space-4) var(--space-5); border-bottom: 1px solid var(--border);
+}
+.backBtn { color: var(--text-primary); text-decoration: none; display: flex; }
+.headerTitle { font-size: 1rem; font-weight: 600; }
+
+.content { flex: 1; padding: var(--space-6) var(--space-5); display: flex; flex-direction: column; gap: var(--space-8); }
+
+.proInfo { text-align: center; display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
+.proAvatar {
+  width: 64px; height: 64px; border-radius: 50%; background: var(--brand-500);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; font-weight: 700; color: white;
+}
+.proName { font-size: 1.125rem; font-weight: 700; }
+.serviceInfo { font-size: 0.875rem; color: var(--text-secondary); }
+
+.starsSection { text-align: center; }
+.starsLabel { font-size: 1rem; font-weight: 600; margin-bottom: var(--space-4); }
+.starsRow { display: flex; justify-content: center; gap: var(--space-3); }
+.starBtn { background: none; border: none; cursor: pointer; padding: var(--space-1); transition: transform 0.2s; }
+.starBtn:active { transform: scale(1.2); }
+
+.tagsSection {}
+.tagsLabel { font-size: 0.9375rem; font-weight: 600; margin-bottom: var(--space-3); }
+.tagsGrid { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.tag {
+  padding: var(--space-2) var(--space-4); border-radius: var(--radius-full);
+  border: 1px solid var(--border); background: var(--bg-primary);
+  font-size: 0.875rem; font-weight: 500; color: var(--text-primary);
+  cursor: pointer; transition: all 0.15s;
+}
+.tagActive { background: var(--brand-50); border-color: var(--brand-500); color: var(--brand-600); font-weight: 600; }
+
+.commentSection {}
+.commentInput {
+  width: 100%; padding: var(--space-4); border: 1px solid var(--border);
+  border-radius: var(--radius-md); font-size: 0.9375rem; resize: none;
+  font-family: inherit; outline: none; background: var(--bg-tertiary);
+}
+.commentInput:focus { border-color: var(--brand-500); background: var(--bg-primary); }
+
+.ctaBar {
+  padding: var(--space-4) var(--space-5);
+  padding-bottom: calc(var(--space-4) + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--border);
+}
+
+.successScreen {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  padding: var(--space-8) var(--space-5); gap: var(--space-3);
+}
+.successIcon { font-size: 3rem; }
+.successTitle { font-size: 1.5rem; font-weight: 700; }
+.successSub { font-size: 0.9375rem; color: var(--text-secondary); max-width: 260px; }

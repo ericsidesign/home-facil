@@ -1,0 +1,132 @@
+.page {
+  min-height: 100vh;
+  padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  background-color: var(--bg-primary);
+}
+
+.header {
+  padding: var(--space-6) var(--space-5) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--brand-500);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.meta {
+  color: var(--ink-light);
+  font-size: 0.9375rem;
+  margin-top: 4px;
+}
+
+.statsGrid {
+  display: flex;
+  padding: var(--space-4) var(--space-5);
+  gap: var(--space-3);
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg-secondary);
+}
+
+.statCard {
+  flex: 1;
+  background: white;
+  padding: var(--space-3);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.statValue {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.section {
+  padding: var(--space-5);
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: var(--space-3);
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.menuItemLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.menuItemIcon {
+  color: var(--brand-600);
+}
+
+.logoutBtn {
+  margin-top: var(--space-4);
+  width: 100%;
+  padding: var(--space-4);
+  background-color: var(--error-light);
+  color: var(--error);
+  border: none;
+  border-radius: var(--radius-button);
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  cursor: pointer;
+}

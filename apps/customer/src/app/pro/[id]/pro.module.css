@@ -1,0 +1,86 @@
+.container { padding: 0 0 120px; background: var(--bg-secondary); min-height: 100vh; }
+
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--border);
+}
+.backBtn { color: var(--text-primary); text-decoration: none; display: flex; }
+.headerTitle { font-size: 1rem; font-weight: 600; color: var(--text-primary); }
+
+.profileHero {
+  display: flex; flex-direction: column; align-items: center;
+  padding: var(--space-8) var(--space-5) var(--space-6);
+  gap: var(--space-3);
+  background: var(--bg-primary);
+}
+.avatar {
+  width: 96px; height: 96px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem; font-weight: 700; color: white;
+  box-shadow: var(--shadow-md);
+  border: 4px solid var(--bg-primary);
+}
+.proName { font-size: 1.5rem; font-weight: 800; color: var(--text-primary); letter-spacing: -0.02em; }
+.ratingRow { display: flex; align-items: center; gap: var(--space-1); }
+.ratingValue { font-size: 1rem; font-weight: 700; color: var(--text-primary); }
+.ratingCount { font-size: 0.875rem; color: var(--text-secondary); }
+
+.badges { display: flex; gap: var(--space-2); }
+.badgeVerified {
+  display: flex; align-items: center; gap: 4px;
+  padding: var(--space-1) var(--space-3);
+  background: var(--success-light); color: var(--success);
+  border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600;
+}
+.badgeTop {
+  display: flex; align-items: center; gap: 4px;
+  padding: var(--space-1) var(--space-3);
+  background: var(--warning-light); color: var(--warning);
+  border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600;
+}
+
+.section { padding: var(--space-6) var(--space-5); background: var(--bg-primary); margin-top: 8px; }
+.sectionTitle { font-size: 1.125rem; font-weight: 700; margin-bottom: var(--space-4); color: var(--text-primary); }
+
+.bio {
+  font-size: 1rem; color: var(--brand-700);
+  line-height: 1.6; font-style: italic; font-weight: 500;
+  padding: var(--space-5); background: var(--brand-50);
+  border-radius: var(--radius-xl);
+  position: relative;
+}
+
+.infoGrid {
+  display: flex; flex-direction: column; gap: var(--space-4);
+}
+.infoItem {
+  display: flex; align-items: flex-start; gap: var(--space-3);
+}
+.infoLabel {
+  font-size: 0.875rem; color: var(--text-secondary); font-weight: 500;
+}
+.infoValue { font-size: 0.9375rem; font-weight: 600; color: var(--text-primary); margin-top: 2px;}
+
+.reviewsList { display: flex; flex-direction: column; gap: var(--space-4); }
+.reviewCard {
+  padding: var(--space-4); background: var(--bg-primary);
+  border: 1px solid var(--border-light); border-radius: var(--radius-xl);
+  display: flex; flex-direction: column; gap: var(--space-3);
+  box-shadow: var(--shadow-sm);
+}
+.reviewHeader { display: flex; align-items: center; gap: var(--space-2); }
+.reviewStars { display: flex; gap: 1px; }
+.reviewAuthor { font-size: 0.875rem; font-weight: 600; color: var(--text-primary); }
+.reviewText { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5; }
+.reviewMeta { font-size: 0.75rem; color: var(--text-tertiary); }
+
+.ctaBar {
+  position: fixed; bottom: 0; left: 0; width: 100%;
+  padding: var(--space-4) var(--space-5);
+  padding-bottom: max(var(--space-4), env(safe-area-inset-bottom));
+  background: var(--bg-primary); border-top: 1px solid var(--border-light);
+  display: flex; justify-content: center; z-index: 60;
+  box-shadow: 0 -8px 24px rgba(0,0,0,0.08);
+}
+.ctaBar > a { max-width: 480px; width: 100%; }

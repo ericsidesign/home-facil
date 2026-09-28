@@ -1,0 +1,267 @@
+.page {
+  min-height: 100vh;
+  padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border);
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: var(--ink);
+  cursor: pointer;
+  padding: var(--space-1);
+  margin-left: -var(--space-2);
+}
+
+.headerTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.statusBanner {
+  background-color: var(--brand-50);
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  margin: 16px 20px 0;
+  border: 1px solid var(--brand-100);
+}
+
+.statusTitle {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--brand-700);
+}
+
+.detailRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.detailRow:last-child {
+  margin-bottom: 0;
+}
+
+.iconBox {
+  width: 36px;
+  height: 36px;
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-muted);
+  flex-shrink: 0;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.value {
+  font-size: 0.9375rem;
+  color: var(--ink);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.actionsContainer {
+  padding: var(--space-4) var(--space-5);
+  margin-top: auto;
+}
+
+.actionBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1.0625rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+
+.actionBtn:active {
+  transform: scale(0.98);
+}
+
+.actionBtn:disabled {
+  opacity: 0.7;
+}
+
+.btnAccept {
+  background-color: var(--brand-600);
+}
+
+.btnEnRoute {
+  background-color: var(--warning);
+}
+
+.btnComplete {
+  background-color: var(--success);
+}
+
+.completedMessage {
+  text-align: center;
+  padding: 16px;
+  background-color: var(--success-light);
+  color: var(--success);
+  border-radius: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.cancelledMessage {
+  text-align: center;
+  padding: 16px;
+  background-color: #FEF2F2;
+  color: #DC2626;
+  border-radius: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #FECACA;
+}
+
+/* Custom Confirm Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+  padding: var(--space-4);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modalContent {
+  background: white;
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 400px;
+  padding: var(--space-6);
+  box-shadow: var(--shadow-xl);
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.modalTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+}
+
+.modalCloseBtn {
+  background: none;
+  border: none;
+  color: var(--ink-light);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.modalCloseBtn:hover {
+  background-color: var(--bg-secondary);
+}
+
+.modalDesc {
+  color: var(--ink-light);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin-bottom: var(--space-6);
+}
+
+.modalActions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+}
+
+.modalCancelBtn {
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--bg-secondary);
+  color: var(--ink);
+  border: none;
+  border-radius: var(--radius-button);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modalCancelBtn:hover {
+  background-color: var(--border);
+}
+
+.modalConfirmBtn {
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--brand-500);
+  color: white;
+  border: none;
+  border-radius: var(--radius-button);
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.modalConfirmBtn:hover {
+  opacity: 0.9;
+}

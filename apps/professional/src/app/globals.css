@@ -1,0 +1,208 @@
+:root {
+  /* ═══════════════════════════════════════════════════════════
+     HOME FÁCIL PRO — DESIGN SYSTEM v4.0 (Azul-Violeta / Pro)
+     ═══════════════════════════════════════════════════════════ */
+
+  /* ── Fundos ── */
+  --bg-app:        #F3F4F8;
+  --bg-primary:    #FFFFFF;
+  --bg-secondary:  #F3F4F8;
+  --bg-tertiary:   #ECEEF4;
+
+  /* ── Textos ── */
+  --text-primary:  #1A1D2E;
+  --text-secondary:#6B7190;
+  --text-tertiary: #9CA0B8;
+  --text-inverse:  #FFFFFF;
+
+  /* ── Marca PRO (Azul-Violeta) ── */
+  --brand-50:      #EDE9FE;
+  --brand-100:     #DDD6FE;
+  --brand-200:     #C4B5FD;
+  --brand-300:     #A78BFA;
+  --brand-400:     #8B5CF6;
+  --brand-500:     #7C3AED;
+  --brand-600:     #6D28D9;
+  --brand-700:     #5B21B6;
+  --accent:        #F59E0B;
+  --accent-light:  #FFF8E1;
+
+  /* ── Status ── */
+  --success:       #10B981;
+  --success-light: #D1FAE5;
+  --warning:       #F59E0B;
+  --warning-light: #FFF8E1;
+  --error:         #EF4444;
+  --error-light:   #FEE2E2;
+
+  /* ── Bordas ── */
+  --border:        #E5E7EB;
+  --border-light:  #F0F1F5;
+  --border-focus:  var(--brand-400);
+
+  /* ── Aliases ── */
+  --bg-linen: var(--bg-primary);
+  --surface: var(--bg-primary);
+  --surface-muted: var(--bg-tertiary);
+  --ink: var(--text-primary);
+  --ink-muted: var(--text-secondary);
+  --ink-light: var(--text-secondary);
+  --primary: var(--brand-500);
+  --primary-dark: var(--brand-600);
+  --primary-light: var(--brand-100);
+  --primary-forest: var(--brand-500);
+  --primary-forest-dark: var(--brand-600);
+  --line: var(--border);
+  --status-green: var(--success);
+  --status-green-light: var(--success-light);
+  --status-red: var(--error);
+
+  /* ── Espaçamentos ── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  /* ── Raios ── */
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-xl:   20px;
+  --radius-2xl:  24px;
+  --radius-full: 9999px;
+  --radius-card: var(--radius-xl);
+  --radius-button: var(--radius-md);
+  --radius-pill: var(--radius-full);
+
+  /* ── Sombras (muito suaves) ── */
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.03);
+  --shadow-sm: 0 2px 6px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.08);
+  --shadow-card: 0 2px 8px rgba(0,0,0,0.04);
+  --shadow-nav: 0 -1px 12px rgba(0,0,0,0.05);
+  --shadow-organic: var(--shadow-sm);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+p, span, div, button, input, textarea, select, label, a {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.mobile-container {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--bg-app);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.card {
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-4);
+  transition: transform 0.15s ease;
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: var(--brand-500);
+  color: white;
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-5);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border: none;
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.input {
+  width: 100%;
+  height: 48px;
+  padding: 0 var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  background-color: var(--bg-tertiary);
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.input:focus {
+  border-color: var(--border-focus);
+  background-color: var(--bg-primary);
+}
+
+.input::placeholder {
+  color: var(--text-tertiary);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateX(-50%) translateY(-20px); opacity: 0; }
+  to { transform: translateX(-50%) translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(124,58,237,0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(124,58,237,0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
