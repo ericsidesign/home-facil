@@ -1,0 +1,7 @@
+{
+  "name": "home-facil-workspace",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ]
+}
